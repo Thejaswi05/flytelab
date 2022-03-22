@@ -2,6 +2,11 @@ import os.path
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 
+# Downloads the kaggle dataset. To run this function, please set ENV variables
+# export KAGGLE_USERNAME='' and export KAGGLE_KEY='' .
+# If the values are not set kaggle API would throw a message to set those details.
+
+
 def get_dataset():
     api = KaggleApi()
     api.authenticate()
@@ -12,4 +17,4 @@ def get_dataset():
         print("Fitness exercise dataset doesn't exist. Please check!")
 
 
-get_dataset();
+get_dataset()
