@@ -7,7 +7,7 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 # If the values are not set kaggle API would throw a message to set those details.
 
 
-def get_dataset():
+def download_fitness_dataset():
     api = KaggleApi()
     api.authenticate()
     api.dataset_download_file('edoardoba/fitness-exercises-with-animations', file_name='fitness_exercises.csv')
@@ -15,6 +15,3 @@ def get_dataset():
         print("Downloaded fitness exercise dataset successfully!")
     else:
         print("Fitness exercise dataset doesn't exist. Please check!")
-
-
-get_dataset()
