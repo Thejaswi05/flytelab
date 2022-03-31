@@ -37,3 +37,9 @@ COPY $config /root/flyte.config
 # when registering tasks, workflows, and launch plans
 ARG image
 ENV FLYTE_INTERNAL_IMAGE $image
+
+ARG kaggle_username
+ENV KAGGLE_USERNAME $kaggle_username
+
+ARG kaggle_key
+ENV KAGGLE_KEY $kaggle_key
