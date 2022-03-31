@@ -31,7 +31,7 @@ class Features:
     name: string
     target: string
 
+# TODO: This will most likely be removed so make sure to remove the libraries above if we do
 def map_fitness_data_to_features():
     dataset = download_fitness_dataset()
 
-map_fitness_data_to_features()
