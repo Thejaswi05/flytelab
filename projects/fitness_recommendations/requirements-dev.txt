@@ -2,3 +2,4 @@ docker
 gitpython
 streamlit
 typer
+kaggle
