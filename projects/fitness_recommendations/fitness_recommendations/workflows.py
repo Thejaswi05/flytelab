@@ -1,4 +1,5 @@
 from flytekit import task, workflow
+
 # from download_dataset import download_fitness_dataset
 #
 #
@@ -16,8 +17,10 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 def download_fitness_dataset():
     api = KaggleApi()
     api.authenticate()
-    api.dataset_download_file('edoardoba/fitness-exercises-with-animations', file_name='fitness_exercises.csv')
-    if os.path.isfile('fitness_exercises.csv'):
+    api.dataset_download_file(
+        "edoardoba/fitness-exercises-with-animations", file_name="fitness_exercises.csv"
+    )
+    if os.path.isfile("fitness_exercises.csv"):
         print("Downloaded fitness exercise dataset successfully!")
     else:
         print("Fitness exercise dataset doesn't exist. Please check!")
