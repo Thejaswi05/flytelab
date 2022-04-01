@@ -1,4 +1,6 @@
 from flytekit import task, workflow
+import os.path
+from kaggle.api.kaggle_api_extended import KaggleApi
 
 # from download_dataset import download_fitness_dataset
 #
@@ -8,9 +10,6 @@ from flytekit import task, workflow
 #     download_fitness_dataset()
 #
 #
-
-import os.path
-from kaggle.api.kaggle_api_extended import KaggleApi
 
 
 @task
