@@ -19,7 +19,7 @@ parser = ArgumentParser()
 parser.add_argument("--remote", action="store_true")
 args = parser.parse_args()
 
-backend = os.getenv("FLYTE_BACKEND", 'remote' if args.remote else 'sandbox')
+backend = os.getenv("FLYTE_BACKEND", "remote" if args.remote else "sandbox")
 
 # configuration for accessing a Flyte cluster backend
 remote = FlyteRemote.from_config(
@@ -68,4 +68,6 @@ sample_index = st.slider(
 
 st.image(data.images[sample_index], clamp=True, width=300)
 st.write(f"Ground Truth: {data.target[sample_index]}")
-st.write(f"Prediction: {model.predict(data.frame[data.feature_names].loc[[sample_index]])[0]}")
+st.write(
+    f"Prediction: {model.predict(data.frame[data.feature_names].loc[[sample_index]])[0]}"
+)
